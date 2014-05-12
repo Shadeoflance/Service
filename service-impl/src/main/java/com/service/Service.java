@@ -10,24 +10,24 @@ public class Service
     {
         Clients = clients;
     }
-    public String get(int ID)
+    public ClientsApi.Client get(int ID)
     {
-        return Clients.get(ID).toString();
+        return Clients.get(ID);
     }
-    public String get(String name)
+    public ClientsApi.Client get(String name)
     {
-        return Clients.get(name).toString();
+        return Clients.get(name);
     }
-    public String add(String name)
+    public ClientsApi.Client add(String name)
     {
-        return Clients.add(name).toString();
+        return Clients.add(name);
     }
-    public String getAll()
+    public ClientsApi.Client[] getAll()
     {
         return Clients.getAll();
     }
-    public String set(int ID, String name)
+    public ClientsApi.Client set(int ID, String name)
     {
-        return Clients.set(ID, name).toString();
+        return Clients.set(ID, name);
     }
 }

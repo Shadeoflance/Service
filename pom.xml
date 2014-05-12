@@ -9,6 +9,7 @@
         <module>service-api</module>
         <module>service-impl</module>
         <module>console</module>
+        <module>web-service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -32,4 +33,23 @@
           <version>4.0-beta</version>
       </dependency>
   </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.service.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

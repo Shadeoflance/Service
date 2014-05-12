@@ -5,10 +5,6 @@ import com.google.inject.Guice;
 import java.util.Scanner;
 import com.google.inject.Injector;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
@@ -50,7 +46,8 @@ public class App
             }
             if(i == 3)
             {
-                System.out.println(Cl.getAll());
+                for(ClientsApi.Client a : Cl.getAll())
+                    System.out.println(a);
             }
         }
     }

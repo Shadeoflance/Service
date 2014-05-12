@@ -47,11 +47,10 @@ public class ClientsImpl extends ClientsApi
         return t;
     }
 
-    public String getAll()
+    public Client[] getAll()
     {
-        String t = "";
-        for(Client i : Clients)
-            t += i.toString() + "\n";
+        Client[] t = new Client[Clients.size()];
+        Clients.toArray(t);
         return t;
     }
 }

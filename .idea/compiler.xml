@@ -25,8 +25,16 @@
         <module name="console" />
         <module name="service-api" />
         <module name="service-impl" />
+        <module name="web-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="console" target="1.7" />
+      <module name="Service" target="1.7" />
+      <module name="service-api" target="1.7" />
+      <module name="service-impl" target="1.7" />
+      <module name="web-service" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

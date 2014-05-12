@@ -21,6 +21,6 @@ public abstract class ClientsApi
     public abstract Client get(int ID);
     public abstract Client get(String name);
     public abstract Client add(String name);
-    public abstract String getAll();
+    public abstract Client[] getAll();
     public abstract Client set(int ID, String name);
 }
