@@ -16,7 +16,7 @@ public class App
         Cl.add("Dan");
         Cl.add("Arin");
         Cl.add("Barry");
-        System.out.println("1: Set \n2: Get \n3: GetAll");
+        System.out.println("1: Set \n2: Get \n3: GetAll ");
         while(true)
         {
             int i = S.nextInt();
@@ -27,11 +27,11 @@ public class App
                 System.out.print("ID: ");
                 int t = S.nextInt();
                 System.out.print("Name: ");
-                System.out.println(Cl.set(t, S.next()));
+                Cl.set(t, S.next());
             }
             if(i == 2)
             {
-                System.out.println("1: Get by name \n2: Get by ID");
+                System.out.println("1: Get by name \n2: Get by ID ");
                 int t = S.nextInt();
                 if(t == 1)
                 {

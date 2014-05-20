@@ -2,6 +2,8 @@ package com.service;
 
 import com.google.inject.Inject;
 
+import java.util.List;
+
 public class Service
 {
     ClientsApi Clients;
@@ -18,16 +20,16 @@ public class Service
     {
         return Clients.get(name);
     }
-    public ClientsApi.Client add(String name)
+    public void add(String name)
     {
-        return Clients.add(name);
+        Clients.add(name);
     }
-    public ClientsApi.Client[] getAll()
+    public List<ClientsApi.Client> getAll()
     {
         return Clients.getAll();
     }
-    public ClientsApi.Client set(int ID, String name)
+    public void set(int ID, String name)
     {
-        return Clients.set(ID, name);
+        Clients.set(ID, name);
     }
 }

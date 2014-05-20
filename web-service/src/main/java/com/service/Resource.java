@@ -43,26 +43,19 @@ public class Resource {
 
     @GET
     @Path("add")
-    @Produces(MediaType.APPLICATION_JSON)
-    public JsonObject add(@QueryParam("name") String name)
+    @Produces(MediaType.TEXT_PLAIN)
+    public String add(@QueryParam("name") String name)
     {
-        ClientsApi.Client t = Service.add(name);
-        return Json.createObjectBuilder().add("ID", t.ID).add("name", t.name).build();
+        Service.add(name);
+        return "Success!";
     }
 
     @GET
     @Path("set")
-    @Produces(MediaType.APPLICATION_JSON)
-    public JsonObject set(@QueryParam("name") String name, @QueryParam("id") int id)
-    {
-        ClientsApi.Client t = Service.set(id, name);
-        return Json.createObjectBuilder().add("ID", t.ID).add("name", t.name).build();
-    }
-
-    @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String getIt()
+    public String set(@QueryParam("name") String name, @QueryParam("id") int id)
     {
-        return "Got it!";
+        Service.set(id, name);
+        return "Success!";
     }
 }

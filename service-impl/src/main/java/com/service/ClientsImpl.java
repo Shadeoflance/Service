@@ -7,21 +7,19 @@ public class ClientsImpl extends ClientsApi
 {
     private List<Client> Clients = new ArrayList<Client>();
 
-    public Client set(int ID, String name)
+    public void set(int ID, String name)
     {
         Client t = get(ID);
         if(t != null)
             t.name = name;
-        else t = add(name);
-        return t;
+        else add(name);
     }
 
-    public Client add(String name)
+    public void add(String name)
     {
         int id = (Clients.isEmpty()) ? 0 : Clients.get(Clients.size() - 1).ID + 1;
         Client t = new Client(name, id);
         Clients.add(t);
-        return t;
     }
 
     public Client get(int ID)
@@ -47,10 +45,8 @@ public class ClientsImpl extends ClientsApi
         return t;
     }
 
-    public Client[] getAll()
+    public List<Client> getAll()
     {
-        Client[] t = new Client[Clients.size()];
-        Clients.toArray(t);
-        return t;
+        return Clients;
     }
 }
